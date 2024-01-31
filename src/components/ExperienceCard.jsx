@@ -36,9 +36,13 @@ export default function ExperienceCard({
       </CardBody>
       <Divider />
       <CardFooter>
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-row  flex-wrap space-x-2">
           {chips.map((chipName) => {
-            return <Chip id={`${company}-${chipName}`}>{chipName}</Chip>;
+            return (
+              <Chip key={`${company}-${chipName}`} className="m-1">
+                {chipName}
+              </Chip>
+            );
           })}
         </div>
       </CardFooter>

@@ -1,35 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import experience from '../json/Experience';
-import ExperienceCard from '../components/ExperienceCard'
+import Layout from "../layouts/Layout.astro";
+import experience from "../json/Experience";
+import ExperienceCard from "../components/ExperienceCard";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<p class="text-center">Experience</p>
-		<div class="flex justify-center">
-			<div class="flex flex-col-reverse space-y-8 space-y-reverse my-8">
-				{experience.map((eachExperience)=>{
-					return(
-					<div>
-					<ExperienceCard 
-					company={eachExperience.company}
-					jobTitle={eachExperience.title}
-					years={eachExperience.dates}
-					description={eachExperience.description}
-					chips={eachExperience.chips}
-					id={`${eachExperience.company}-${eachExperience.title}`}
-		
-					/>
-				</div>
-					)
-				})}
-			</div>
-
-
-		
-	</div>
-
-	</main>
+  <main>
+    <p class="text-center">Experience</p>
+    <div class="flex justify-center">
+      <div class="flex flex-col-reverse space-y-8 space-y-reverse my-8">
+        {
+          experience.map((eachExperience) => {
+            return (
+              <div>
+                <ExperienceCard
+                  company={eachExperience.company}
+                  jobTitle={eachExperience.title}
+                  years={eachExperience.dates}
+                  description={eachExperience.description}
+                  chips={eachExperience.chips}
+                  key={`${eachExperience.company}-${eachExperience.title}`}
+                />
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </main>
 </Layout>
-

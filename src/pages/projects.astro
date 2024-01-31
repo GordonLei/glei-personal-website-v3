@@ -1,10 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import WIPProjects from "../json/WIP";
+import CompletedProjects from "../json/Completed";
+import ProjectCard from "../components/ProjectCard";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-
-	</main>
+  <main>
+    <div>
+      <div>
+        <p class="text-center">WIP Projects</p>
+        <div class="grid grid-cols-2 justify-items-center">
+          {
+            WIPProjects.toReversed().map((eachProject) => {
+              return (
+                <div class="">
+                  <ProjectCard
+                    projectName={eachProject.title}
+                    subheader={eachProject.subheader}
+                    description={eachProject.description}
+                    demoLink={eachProject.demoLink}
+                    githubLink={eachProject.githubLink}
+                    images={eachProject.images}
+                    chips={eachProject.technology}
+                    key={`${eachProject.title}`}
+                    client:only="react"
+                  />
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+      <div>
+        <p class="text-center">Completed Projects</p>
+        <div class="grid grid-cols-2 justify-items-center">
+          {
+            CompletedProjects.toReversed().map((eachProject) => {
+              return (
+                <div class="">
+                  <ProjectCard
+                    projectName={eachProject.title}
+                    subheader={eachProject.subheader}
+                    description={eachProject.description}
+                    demoLink={eachProject.demoLink}
+                    githubLink={eachProject.githubLink}
+                    images={eachProject.images}
+                    chips={eachProject.technology}
+                    key={`${eachProject.title}`}
+                    client:only="react"
+                  />
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
-
