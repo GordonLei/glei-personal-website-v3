@@ -48,7 +48,7 @@ export default function PortfolioNavbar() {
       </NavbarBrand>
       <NavbarContent className="sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link color="foreground" href="/about">
             About
           </Link>
         </NavbarItem>

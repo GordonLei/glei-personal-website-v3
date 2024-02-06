@@ -1,19 +1,19 @@
 const languages = [
   {
-    imgSrc: process.env.PUBLIC_URL + "/img/favicons/python.png",
-    hoverText: "Python3"
+    imgSrc: "/img/favicons/python.png",
+    hoverText: "Python3",
   },
   {
-    imgSrc: process.env.PUBLIC_URL + "/img/favicons/cpp_logo.png",
-    hoverText: "C++"
+    imgSrc: "/img/favicons/cpp_logo.png",
+    hoverText: "C++",
   },
   {
-    imgSrc: process.env.PUBLIC_URL + "/img/favicons/js.png",
-    hoverText: "Javascript"
+    imgSrc: "/img/favicons/js.png",
+    hoverText: "Javascript",
   },
   {
-    imgSrc: process.env.PUBLIC_URL + "/img/favicons/swift.svg",
-    hoverText: "Swift"
-  }
+    imgSrc: "/img/favicons/swift.svg",
+    hoverText: "Swift",
+  },
 ];
 export default languages;

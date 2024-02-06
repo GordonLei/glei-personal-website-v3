@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Languages from "../json/Languages.js";
+import WD from "../json/WebDevelopment.js";
+import FL from "../json/FrameworksLibraries.js";
+import Misc from "../json/Misc.js";
+
+import SkillsCard from "../components/SkillsCard";
+---
+
+<Layout title="Welcome to Gordon Lei's portfolio">
+  <main>
+    <!-- This is the about me header section -->
+    <div>
+      <div class="font-bold text-4xl text-center m-4">ABOUT ME</div>
+      <div class="text-center m-4">
+        Here you will find more information about me and what are my current
+        skills
+      </div>
+    </div>
+    <!-- This is the about blub part with Skills  -->
+    <div class="grid grid-flow-col grid-cols-2 my-4 mx-4 lg:mx-64">
+      <div>
+        <div class="font-bold text-2xl text-center m-4">Get to know me!</div>
+        <div>
+          <p>
+            During 8th grade, I was introduced to a tool tangental to computer
+            science but essential to any student's toolkit, a TI-84 graphing
+            calculator. Ever since the first day of class, my Algebra 1 teacher
+            professed the importance of being able to understand how to use our
+            tools to the full extent and persuaded his students to read the
+            TI-84 manual and encouraged us to learn how to program using the
+            calculator. From creating simple apps such as the 22-counting math
+            game, I fell into the rabbit hole of programming.
+          </p>
+          <p>
+            Fast forward to today, I am a last semester graduate student
+            pursuing a Masters in Software Engineering at Carnegie Mellon
+            University. I have worked on creating a uniform front-end library at
+            CrossBorder Solutions, creating proof of concepts and utilizing
+            Single-Sign-On (SSO) capabilities on Microsoft Azure at Becton
+            Dickinson, and deployed simple social networks and Service as a
+            Product (SaaP) as class projects at Carnegie Mellon. I am currently
+            working on a personal project called Hextech which aims to simulate
+            item builds affect champions' damage in the game League of Legends.
+          </p>
+          <p>
+            If I am not working on school work or personal projects, I am
+            usually pursuing my passion of photography, hanging out with
+            friends, or on the Rift.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="font-bold text-2xl text-center m-4">My Skills</div>
+        <div>
+          <div class="text-center font-semibold text-2xl">Languages</div>
+          <div class="flex flex-col sm:flex-row justify-center md:space-x-20">
+            {
+              Languages.map((each, index) => {
+                return (
+                  <SkillsCard
+                    key={index}
+                    imgSrc={each.imgSrc}
+                    hoverText={each.hoverText}
+                  />
+                );
+              })
+            }
+          </div>
+          <div class="text-center font-semibold text-2xl">Web Development</div>
+          <div class="flex flex-col sm:flex-row justify-center md:space-x-20">
+            {
+              WD.map((each, index) => {
+                return (
+                  <SkillsCard
+                    key={index}
+                    imgSrc={each.imgSrc}
+                    hoverText={each.hoverText}
+                  />
+                );
+              })
+            }
+          </div>
+          <div class="text-center font-semibold text-2xl">
+            Frameworks and Libaries
+          </div>
+          <div class="flex flex-col sm:flex-row justify-center md:space-x-20">
+            {
+              FL.map((each, index) => {
+                return (
+                  <SkillsCard
+                    key={index}
+                    imgSrc={each.imgSrc}
+                    hoverText={each.hoverText}
+                  />
+                );
+              })
+            }
+          </div>
+          <div class="text-center font-semibold text-2xl">Misc.</div>
+          <div class="flex flex-col sm:flex-row justify-center md:space-x-20">
+            {
+              Misc.map((each, index) => {
+                return (
+                  <SkillsCard
+                    key={index}
+                    imgSrc={each.imgSrc}
+                    hoverText={each.hoverText}
+                  />
+                );
+              })
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
