@@ -62,9 +62,16 @@ export default function PortfolioNavbar() {
             Projects
           </Link>
         </NavbarItem>
+        {/* 
         <NavbarItem>
           <Link color="foreground" href="/resume">
             Resume
+          </Link>
+        </NavbarItem>
+        */}
+        <NavbarItem>
+          <Link color="foreground" href="/contact">
+            Contact
           </Link>
         </NavbarItem>
       </NavbarContent>

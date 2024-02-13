@@ -25,7 +25,7 @@ export default function ProjectCard({
       {/*Card Header. Not using the NextUI one to make one use Grids*/}
       <div className="flex flex-col relative w-full p-3 flex-auto  place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
         <div className="grid grid-cols-2">
-          <div className="text-md">{projectName}</div>
+          <div className="text-md font-bold">{projectName}</div>
         </div>
 
         <p className="text-small text-default-500">{subheader}</p>

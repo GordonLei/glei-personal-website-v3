@@ -9,7 +9,10 @@ import ProjectCard from "../components/ProjectCard";
   <main>
     <div>
       <div>
-        <p class="text-center">WIP Projects</p>
+        <div class="font-bold text-4xl text-center m-4">WIP Projects</div>
+        <div class="text-center m-4">
+          Here is the list of projects I am currently working on
+        </div>
         <div class="grid grid-cols-2 justify-items-center">
           {
             WIPProjects.toReversed().map((eachProject) => {
@@ -33,7 +36,10 @@ import ProjectCard from "../components/ProjectCard";
         </div>
       </div>
       <div>
-        <p class="text-center">Completed Projects</p>
+        <div class="font-bold text-4xl text-center m-4">Completed Projects</div>
+        <div class="text-center m-4">
+          Here is the list of projects I have completed and/or worked on
+        </div>
         <div class="grid grid-cols-2 justify-items-center">
           {
             CompletedProjects.toReversed().map((eachProject) => {
