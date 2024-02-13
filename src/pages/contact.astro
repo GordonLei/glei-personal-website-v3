@@ -1,7 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContactChip from "../components/ContactChip";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main></main>
+  <main>
+    <!-- Header -->
+    <div>
+      <div class="font-bold text-4xl text-center m-4">Contact</div>
+      <div class="text-center m-4">
+        Feel free to contact me by emailing <span>glei@andrew.cmu.edu</span> or through
+        the following services and I will get back to you as soon as possible!
+      </div>
+    </div>
+    <!--  -->
+    <div class="m-4 flex flex-row space-x-16 justify-center">
+      <ContactChip
+        imageSrc="/img/favicons/email.png"
+        imageAlt="e-mail"
+        imageText="glei@andrew.cmu.edu"
+      />
+      <ContactChip
+        imageSrc="/img/favicons/LI-In-Bug.png"
+        imageAlt="linkedin"
+        imageText="gordon-lei"
+        link="https://www.linkedin.com/in/gordon-lei-a1b238181/"
+      />
+      <ContactChip
+        imageSrc="/img/favicons/github.png"
+        imageAlt="github"
+        imageText="GordonLei"
+        link="https://github.com/GordonLei"
+      />
+    </div>
+  </main>
 </Layout>

@@ -44,7 +44,9 @@ export default function PortfolioNavbar() {
       </NavbarContent>
       */}
       <NavbarBrand>
-        <p className="font-bold text-inherit">Gordon Lei</p>
+        <Link color="foreground" href="/">
+          <p className="font-bold text-inherit">Gordon Lei</p>
+        </Link>
       </NavbarBrand>
       <NavbarContent className="sm:flex gap-4" justify="center">
         <NavbarItem>
