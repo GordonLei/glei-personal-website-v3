@@ -9,6 +9,7 @@ import {
   NavbarItem,
   Link,
   Button,
+  Image,
 } from "@nextui-org/react";
 
 export default function PortfolioNavbar() {
@@ -43,8 +44,13 @@ export default function PortfolioNavbar() {
         </NavbarBrand>
       </NavbarContent>
       */}
-      <NavbarBrand>
-        <Link color="foreground" href="/">
+      <NavbarBrand className="">
+        <Link color="foreground" href="/" className="">
+          <img
+            alt="Gordon Lei"
+            src="/img/profile.png"
+            className="h-10 w-10 mx-4"
+          />
           <p className="font-bold text-inherit">Gordon Lei</p>
         </Link>
       </NavbarBrand>
