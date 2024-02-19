@@ -1,17 +1,91 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContactChip from "../components/ContactChip";
 ---
 
 <Layout title="Welcome to Gordon Lei's portfolio">
   <main>
-    <!-- This is the  header section -->
+    <!-- 
     <div>
-      <div class="font-bold text-4xl text-center m-4">
-        Yahallo I'm Gordon Lei
+      <div class="font-bold text-4xl text-center m-4 mt-16">
+        Yahallo, I'm Gordon Lei
       </div>
       <div class="text-center m-4">
         I build engaging Web Applications to help aid users find desired
         information and results
+      </div>
+    </div>
+  -->
+    <div class="flex flex-row h-[calc(100vh-65px)]">
+      <!-- This div is the name section -->
+      <div
+        class="w-1/3 h-full overflow-hidden flex flex-col flex-grow bg-blue-400"
+      >
+        <div class="flex flex-col">
+          <div>Gordon Lei</div>
+          <div>Looking for full time offers</div>
+          <div>
+            I build engaging Web Applications to help aid users find desired
+            information and results
+          </div>
+          <!-- Contact Bar -->
+          <div class="flex flex-row">
+            <ContactChip imageSrc="/img/favicons/email.png" imageAlt="e-mail" />
+            <ContactChip
+              imageSrc="/img/favicons/LI-In-Bug.png"
+              imageAlt="linkedin"
+              link="https://www.linkedin.com/in/gordon-lei-a1b238181/"
+            />
+            <ContactChip
+              imageSrc="/img/favicons/github.png"
+              imageAlt="github"
+              link="https://github.com/GordonLei"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- This div is the content section -->
+      <div class="w-2/3 bg-gray-50 max-h-screen overflow-y-auto">
+        <!-- Start of the Info -->
+        <div class="flex flex-col">
+          <!-- About -->
+          <div class="flex flex-col">
+            <p class="font-bold">About</p>
+            <p class="font-semibold">Yahallo!</p>
+            <p>
+              My name is Gordon Lei. During 8th grade, I fell in love with
+              creating simple applications such as the "Counting to 24" math
+              game on something that was tangental to computer science but key
+              to any student's toolkit: a TI-84 graphing calculator. From
+              creating such applets I fell in love with programming as anything
+              I imagined could be created if I put my heart and time into it.
+            </p>
+            <p>
+              Fast forward to today, my love for programming had led me to
+              graduate from CMU with a Masters of Science in Software
+              Engineering as well as graduated from NYU with a Bachelors of
+              Science in Computer Science. I have helped create potential
+              inhouse tools and front-end frameworks during my internship at
+              CrossBorder Solutions and have deployed proof-of-concepts on the
+              cloud during my internship at Becton Dickinson.
+            </p>
+            <p>
+              If I am not working on school work or personal projects, I am
+              usually pursuing my passion of photography, hanging out with
+              friends, or on the Rift.
+            </p>
+          </div>
+          <!-- Experience -->
+          <div class="flex flex-col">
+            <p class="font-bold">Experiences</p>
+            <p>A full list of my experiences can be found via the NavBar</p>
+          </div>
+          <!-- Projects -->
+          <div class="flex flex-col">
+            <p class="font-bold">Projects</p>
+            <p>A full list of my projects can be found via the NavBar</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
