@@ -184,6 +184,48 @@ const completed = [
       "/img/lunchify/lunchify_7.png",
     ],
   },
+  {
+    title: "Blizzard Emergency Social Network",
+    technology: ["Node.js", "Socket.IO", "SQLite"],
+    subheader: "Foundations in Software Engineering Final Group Project",
+    description:
+      "Worked with a team of 4 students to create a based social media application with public wall and private messaging capabilities with additional features geared towards blizzards (ex. requesting resources on a map). Created request board functionality that dynamically update via Socket.IO when requester closes requests. Used Node.JS to create a backend server with an API component to fetch data from SQLite database",
+    demoLink: "",
+    githubLink: "",
+    images: [],
+  },
+  {
+    title: "Mockly",
+    technology: ["Node.js", "React", "Docker"],
+    subheader: "Software Design and Architecture Final Group Project",
+    description:
+      "Service Oriented Architecture based web applications where users can sign up to prepare for up-coming interviewers. Users can input their payment information and be paid to be a mock interviewer for other users. Uses Google Meets API to help facilitate interviews with an optional feedback service to rate interviewers / interviewees",
+    demoLink: "",
+    githubLink: "https://github.com/cmusv-sasd/SDA-S2023-T8-mockly",
+    images: [],
+  },
+  {
+    title: "Multi Label Code Smell Classification",
+    technology: ["Python", "SKLearn", "Weka"],
+    subheader: "Data Science for Software Engineering final group project",
+    description:
+      "Trained multiple models through 5+ various ways to determine if a code smell (ex. feature envy) exists in the section of the code with datasets of code smells seperated from each other and two self-formed datasets containing the datasets of code smells that thematically relate to each other.",
+    demoLink: "",
+    githubLink:
+      "https://github.com/yuxinjiaS2023/multi-label-code-smell-classification",
+    images: [],
+  },
+  {
+    title: "WellNest",
+    technology: ["React", "Figma", "Material UI", "Tailwind"],
+    subheader:
+      "Software Requirements and Interaction Design Group Final Project",
+    description:
+      "WellNest is your all-in-one solution to bridge the gap between mental health awareness, prevention, and treatment. Especially, if you are a young professional! Contains a mock feature to simulate matching with a therapist and simulate Google Workspace + Google Meetings integration. Has a feature to help track your mood via journalling. Contains mock feature to play games to earn rewards",
+    demoLink: "",
+    githubLink: "https://github.com/WinexWolf/WellNestApp",
+    images: [],
+  },
 ];
 
 export default completed;
