@@ -1,6 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactChip from "../components/ContactChip";
+import ExperienceSlab from "../components/ExperienceSlab";
+import ProjectSlab from "../components/ProjectSlab";
+
+const ExperienceInfo = [
+  {
+    category: "Work Experience",
+    company: "CrossBorder Solutions",
+    title: "Software Engineering Intern",
+    dates: "June 2021 – Aug. 2022 ",
+    description:
+      "Collaborated with two interns to create a web-based change data capture application with AWS Lambda. Devised responsive React-based user interface with query capabilities using Material UI and React Redux. Built five components with documentation and Jest tests for internal front-end framework",
+    chips: ["React", "MaterialUI", "AWS Lambda"],
+  },
+  {
+    category: "Work Experience",
+    company: "Becton Dickinson",
+    title: "Software Engineering Intern",
+    dates: "May 2023 - Aug. 2023",
+    description:
+      "Deployed OpenEMR onto Microsoft Azure and created Postman scripts to create API client and queries. Researched open-source libraries and created SMART on FHIR applications with Single-Sign-On capabilities. Developed and presented proof-of-concept of standalone application using OpenSearch to development team",
+    chips: ["Azure", "OpenSearch", "Postman", "Node.JS"],
+  },
+];
+
+const ProjectInfo = [
+  {
+    title: "Mockly",
+    technology: ["Node.js", "React", "Docker"],
+    subheader: "Software Design and Architecture Final Group Project",
+    description:
+      "Service Oriented Architecture based web applications where users can sign up to prepare for up-coming interviewers. Users can input their payment information and be paid to be a mock interviewer for other users. Uses Google Meets API to help facilitate interviews with an optional feedback service to rate interviewers / interviewees",
+    demoLink: "",
+    githubLink: "https://github.com/cmusv-sasd/SDA-S2023-T8-mockly",
+    images: [],
+  },
+  ,
+  {
+    title: "WellNest",
+    technology: ["React", "Figma", "Material UI", "Tailwind"],
+    subheader:
+      "Software Requirements and Interaction Design Group Final Project",
+    description:
+      "WellNest is your all-in-one solution to bridge the gap between mental health awareness, prevention, and treatment. Especially, if you are a young professional! Contains a mock feature to simulate matching with a therapist and simulate Google Workspace + Google Meetings integration. Has a feature to help track your mood via journalling. Contains mock feature to play games to earn rewards",
+    demoLink: "",
+    githubLink: "https://github.com/WinexWolf/WellNestApp",
+    images: [],
+  },
+  {
+    title: "Hextech",
+    technology: ["Next.js", "Tailwind"],
+    subheader: "League of Legends Build Analyzer",
+    description:
+      "Personal project to work with Riot API + DataDragon API. Shows changes to champion statistics and abilities depending on item builds ",
+    demoLink: "",
+    githubLink: "https://github.com/GordonLei/Hextech",
+    images: [],
+  },
+];
 ---
 
 <Layout title="Welcome to Gordon Lei's portfolio">
@@ -79,6 +137,24 @@ import ContactChip from "../components/ContactChip";
           <div class="flex flex-col">
             <p class="font-bold">Experiences</p>
             <p>A full list of my experiences can be found via the NavBar</p>
+            <div class="flex flex-col-reverse space-y-8 space-y-reverse my-8">
+              {
+                ExperienceInfo.map((eachExperience) => {
+                  return (
+                    <div>
+                      <ExperienceSlab
+                        company={eachExperience.company}
+                        jobTitle={eachExperience.title}
+                        years={eachExperience.dates}
+                        description={eachExperience.description}
+                        chips={eachExperience.chips}
+                        key={`${eachExperience.company}-${eachExperience.title}`}
+                      />
+                    </div>
+                  );
+                })
+              }
+            </div>
           </div>
           <!-- Projects -->
           <div class="flex flex-col">
