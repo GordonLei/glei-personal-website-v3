@@ -11,15 +11,13 @@ export default function ExperienceSlab({
 }) {
   return (
     <div className="flex flex-row max-w p-4">
-      {/* Years Column */}
-      <div className="w-1/3">
-        <div className="text-md justify-self-end">{years}</div>
-      </div>
       {/* MAIN Column */}
-      <div className="w-2/3">
+      <div className="w">
         <p className="font-bold text-lg">
           {jobTitle} @ {company}
         </p>
+
+        <div className="text-md justify-self-end">{years}</div>
 
         <p className="my-4">{description}</p>
 

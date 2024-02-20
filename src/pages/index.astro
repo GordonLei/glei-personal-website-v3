@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
 import ContactChip from "../components/ContactChip";
 import ExperienceSlab from "../components/ExperienceSlab";
 import ProjectSlab from "../components/ProjectSlab";
@@ -56,7 +57,15 @@ const ProjectInfo = [
       "Personal project to work with Riot API + DataDragon API. Shows changes to champion statistics and abilities depending on item builds ",
     demoLink: "",
     githubLink: "https://github.com/GordonLei/Hextech",
-    images: [],
+    images: [
+      "/img/lunchify/lunchify_1.png",
+      "/img/lunchify/lunchify_2.png",
+      "/img/lunchify/lunchify_3.png",
+      "/img/lunchify/lunchify_4.png",
+      "/img/lunchify/lunchify_5.png",
+      "/img/lunchify/lunchify_6.png",
+      "/img/lunchify/lunchify_7.png",
+    ],
   },
 ];
 ---
@@ -160,6 +169,27 @@ const ProjectInfo = [
           <div class="flex flex-col">
             <p class="font-bold">Projects</p>
             <p>A full list of my projects can be found via the NavBar</p>
+          </div>
+          <div class="flex flex-col-reverse space-y-8 space-y-reverse my-8">
+            {
+              ProjectInfo.map((eachProject) => {
+                return (
+                  <div>
+                    <ProjectSlab
+                      projectName={eachProject.title}
+                      subheader={eachProject.subheader}
+                      description={eachProject.description}
+                      demoLink={eachProject.demoLink}
+                      githubLink={eachProject.githubLink}
+                      images={eachProject.images}
+                      chips={eachProject.technology}
+                      key={`${eachProject.title}`}
+                      client:only="react"
+                    />
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
       </div>
