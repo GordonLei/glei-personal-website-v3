@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image, Link } from "@nextui-org/react";
 
 import ContactChip from "../components/ContactChip";
 import ExperienceSlab from "../components/ExperienceSlab";
 import ProjectSlab from "../components/ProjectSlab";
+import Footer from "../components/Footer.jsx";
 
 const ExperienceInfo = [
   {
@@ -85,38 +87,54 @@ const ProjectInfo = [
   -->
     <div class="flex flex-row h-[calc(100vh-65px)]">
       <!-- This div is the name section -->
+
       <div
-        class="w-1/3 h-full overflow-hidden flex flex-col flex-grow bg-blue-400"
+        class="w-1/2 h-full overflow-hidden flex flex-col flex-grow bg-blue-400"
       >
-        <div class="flex flex-col">
-          <div>Gordon Lei</div>
-          <div>Looking for full time offers</div>
-          <div>
-            I build engaging Web Applications to help aid users find desired
-            information and results
-          </div>
-          <!-- Contact Bar -->
-          <div class="flex flex-row">
-            <ContactChip imageSrc="/img/favicons/email.png" imageAlt="e-mail" />
-            <ContactChip
-              imageSrc="/img/favicons/LI-In-Bug.png"
-              imageAlt="linkedin"
-              link="https://www.linkedin.com/in/gordon-lei-a1b238181/"
-            />
-            <ContactChip
-              imageSrc="/img/favicons/github.png"
-              imageAlt="github"
-              link="https://github.com/GordonLei"
-            />
+        <div class="flex flex-row">
+          <div class="w-1/3"></div>
+          <div class="flex flex-col space-y-4 w-2/3 mr-4 lg:mr-16">
+            <div class="text-5xl font-bold mt-16 mx-4">Gordon Lei</div>
+            <div class="text-2xl font-semibod mx-4">
+              Looking for full time offers
+            </div>
+            <div class="mx-4">
+              I build engaging Web Applications to help aid users find desired
+              information and results
+            </div>
+            <!-- Contact Bar -->
+            <div class="flex flex-row space-x-4 my-4 justify-center">
+              <Link href="mailto: glei@andrew.cmu.edu">
+                <img
+                  alt={`Email`}
+                  src="/img/favicons/email.png"
+                  class="h-8"
+                /></Link
+              >
+              <Link href="https://www.linkedin.com/in/gordon-lei-a1b238181/">
+                <img
+                  alt={`LinkedIn`}
+                  src="/img/favicons/LI-In-Bug.png"
+                  class="h-8"
+                /></Link
+              >
+              <Link href="https://github.com/GordonLei">
+                <img
+                  alt={`GitHub`}
+                  src="/img/favicons/github.png"
+                  class="h-8"
+                /></Link
+              >
+            </div>
           </div>
         </div>
       </div>
       <!-- This div is the content section -->
-      <div class="w-2/3 bg-gray-50 max-h-screen overflow-y-auto">
+      <div class="w-1/2 bg-gray-50 max-h-screen overflow-y-auto">
         <!-- Start of the Info -->
-        <div class="flex flex-col">
+        <div class="flex flex-col space-y-4 mt-8 mx-4 mr-4 lg:mr-16">
           <!-- About -->
-          <div class="flex flex-col">
+          <div class="flex flex-col space-y-4">
             <p class="font-bold">About</p>
             <p class="font-semibold">Yahallo!</p>
             <p>
@@ -144,7 +162,7 @@ const ProjectInfo = [
           </div>
           <!-- Experience -->
           <div class="flex flex-col">
-            <p class="font-bold">Experiences</p>
+            <p class="font-bold mt-32">Experiences</p>
             <p>A full list of my experiences can be found via the NavBar</p>
             <div class="flex flex-col-reverse space-y-8 space-y-reverse my-8">
               {
@@ -167,7 +185,7 @@ const ProjectInfo = [
           </div>
           <!-- Projects -->
           <div class="flex flex-col">
-            <p class="font-bold">Projects</p>
+            <p class="font-bold mt-32">Projects</p>
             <p>A full list of my projects can be found via the NavBar</p>
           </div>
           <div class="flex flex-col-reverse space-y-8 space-y-reverse my-8">
@@ -191,6 +209,7 @@ const ProjectInfo = [
               })
             }
           </div>
+          <div class="mt-16"><Footer /></div>
         </div>
       </div>
     </div>

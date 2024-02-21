@@ -26,7 +26,7 @@ export default function ProjectSlab({
 
         {/* MAIN Column */}
         <div className="w-2/3">
-          <p>
+          <div>
             {githubLink !== "" || demoLink !== "" ? (
               <Link href={demoLink !== "" ? demoLink : githubLink}>
                 <div className="text-md font-bold">{projectName} ↗</div>
@@ -34,7 +34,7 @@ export default function ProjectSlab({
             ) : (
               <div className="text-md font-bold">{projectName}</div>
             )}
-          </p>
+          </div>
           <p>{description}</p>
           <div className="flex flex-row flex-wrap space-x-2">
             {chips.map((chipName) => {

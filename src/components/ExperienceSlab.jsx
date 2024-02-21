@@ -10,7 +10,7 @@ export default function ExperienceSlab({
   ...extras
 }) {
   return (
-    <div className="flex flex-row max-w p-4">
+    <div className="flex flex-row max-w py-4">
       {/* MAIN Column */}
       <div className="w">
         <p className="font-bold text-lg">
