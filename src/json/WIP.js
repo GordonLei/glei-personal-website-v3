@@ -27,7 +27,13 @@ const WIP = [
       "Personal project to work with Riot API + DataDragon API. Shows changes to champion statistics and abilities depending on item builds ",
     demoLink: "",
     githubLink: "https://github.com/GordonLei/Hextech",
-    images: [],
+    images: [
+      "/img/hextech/hextech_1.png",
+      "/img/hextech/hextech_2.png",
+      "/img/hextech/hextech_3.png",
+      "/img/hextech/hextech_4.png",
+      "/img/hextech/hextech_5.png",
+    ],
   },
 ];
 
