@@ -192,7 +192,15 @@ const completed = [
       "Worked with a team of 4 students to create a based social media application with public wall and private messaging capabilities with additional features geared towards blizzards (ex. requesting resources on a map). Created request board functionality that dynamically update via Socket.IO when requester closes requests. Used Node.JS to create a backend server with an API component to fetch data from SQLite database",
     demoLink: "",
     githubLink: "",
-    images: [],
+    images: [
+      "/img/esn/esn_1.png",
+      "/img/esn/esn_2.png",
+      "/img/esn/esn_3.png",
+      "/img/esn/esn_4.png",
+      "/img/esn/esn_5.png",
+      "/img/esn/esn_6.png",
+      "/img/esn/esn_7.png",
+    ],
   },
   {
     title: "Mockly",
@@ -202,7 +210,15 @@ const completed = [
       "Service Oriented Architecture based web applications where users can sign up to prepare for up-coming interviewers. Users can input their payment information and be paid to be a mock interviewer for other users. Uses Google Meets API to help facilitate interviews with an optional feedback service to rate interviewers / interviewees",
     demoLink: "",
     githubLink: "https://github.com/cmusv-sasd/SDA-S2023-T8-mockly",
-    images: [],
+    images: [
+      "/img/mockly/mockly_1.png",
+      "/img/mockly/mockly_2.png",
+      "/img/mockly/mockly_3.png",
+      "/img/mockly/mockly_4.png",
+      "/img/mockly/mockly_5.png",
+      "/img/mockly/mockly_6.png",
+      "/img/mockly/mockly_7.png",
+    ],
   },
   {
     title: "Multi Label Code Smell Classification",
@@ -224,7 +240,16 @@ const completed = [
       "WellNest is your all-in-one solution to bridge the gap between mental health awareness, prevention, and treatment. Especially, if you are a young professional! Contains a mock feature to simulate matching with a therapist and simulate Google Workspace + Google Meetings integration. Has a feature to help track your mood via journalling. Contains mock feature to play games to earn rewards",
     demoLink: "",
     githubLink: "https://github.com/WinexWolf/WellNestApp",
-    images: [],
+    images: [
+      "/img/wellnest/wellnest_1.png",
+      "/img/wellnest/wellnest_2.png",
+      "/img/wellnest/wellnest_3.png",
+      "/img/wellnest/wellnest_4.png",
+      "/img/wellnest/wellnest_5.png",
+      "/img/wellnest/wellnest_6.png",
+      "/img/wellnest/wellnest_7.png",
+      "/img/wellnest/wellnest_8.png",
+    ],
   },
 ];
 
