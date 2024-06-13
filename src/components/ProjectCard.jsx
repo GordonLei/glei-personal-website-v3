@@ -51,7 +51,7 @@ export default function ProjectCard({
           </div>
           <div className="text-md justify-self-end">
             {demoLink !== "" && (
-              <Link href="demoLink">
+              <Link href={demoLink}>
                 <Button color="secondary">Demo Link</Button>
               </Link>
             )}
