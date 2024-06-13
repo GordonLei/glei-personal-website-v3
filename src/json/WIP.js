@@ -20,12 +20,12 @@ const WIP = [
     images: ["/img/neco-arc/neco-arc_1.gif", "/img/neco-arc/neco-arc_2.gif"],
   },
   {
-    title: "Hextech",
+    title: "HextechForge",
     technology: ["Next.js", "Tailwind"],
     subheader: "League of Legends Build Analyzer",
     description:
       "Personal project to work with Riot API + DataDragon API. Shows changes to champion statistics and abilities depending on item builds ",
-    demoLink: "",
+    demoLink: "https://hextechforge.netlify.app",
     githubLink: "https://github.com/GordonLei/Hextech",
     images: [
       "/img/hextech/hextech_1.png",
